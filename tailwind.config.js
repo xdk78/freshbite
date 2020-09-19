@@ -3,8 +3,12 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ['./src/**/*.tsx'],
-  theme: {},
+  purge: ['./src/**/*.vue'],
+  theme: {
+    fontFamily: {
+      serif: 'Pacifico',
+    },
+  },
   variants: {
     backgroundColor: [
       'responsive',

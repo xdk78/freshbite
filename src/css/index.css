@@ -1,0 +1,40 @@
+@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+*,
+*::before,
+*::after {
+  @apply box-border antialiased;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  @apply bg-gray-100 m-0 p-0 w-full h-full;
+}
+
+h1 {
+  @apply text-4xl text-gray-900 font-bold;
+}
+
+h2 {
+  @apply text-3xl text-gray-900 font-bold;
+}
+
+a {
+  @apply no-underline cursor-pointer;
+}
+a:hover,
+a:active {
+  @apply underline;
+}
+button a:hover {
+  @apply no-underline;
+}
+
+@tailwind components;
+/*! purgecss end ignore */
+@tailwind utilities;
+.gtc-auto {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(calc(180px + 12vmin), 100%), 1fr)
+  );
+}

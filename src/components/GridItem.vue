@@ -24,7 +24,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <span>{{ calories }} cal</span>
+            <span>{{ calories }} kcal</span>
           </div>
           <div v-if="duration" class="inline-flex items-center font-semibold">
             <svg

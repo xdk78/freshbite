@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-sm">
+  <header class="bg-white shadow-xs">
     <div
       class="flex flex-wrap py-4 flex-col md:flex-row items-center container mx-auto"
     >

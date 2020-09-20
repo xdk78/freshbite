@@ -35,9 +35,9 @@
         :style="{
           width: '512px',
           height: '512px',
-          backgroundImage: `url(https://img.pngio.com/hd-previous-food-on-plate-png-transparent-png-image-download-food-plate-png-578_580.png)`,
+          backgroundImage: `url('./src/assets/plate.svg')`,
         }"
-        class="bg-no-repeat bg-cover bg-center"
+        class="bg-no-repeat bg-cover bg-center -mb-16"
       ></div>
     </div>
     <h1>Discover</h1>

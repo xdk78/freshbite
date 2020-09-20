@@ -12,7 +12,9 @@
           state.selectedCategory == category ? 'bg-green-200 font-semibold' : ''
         "
         @click="selectedCategoryHandler(category)"
-      >{{ category }}</button>
+      >
+        {{ category }}
+      </button>
     </div>
     <div class="m-4 grid sm:grid-flow-col-dense grid-flow-row-dense gap-4">
       <div

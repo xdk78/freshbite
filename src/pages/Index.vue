@@ -12,9 +12,7 @@
           state.selectedCategory == category ? 'bg-green-200 font-semibold' : ''
         "
         @click="selectedCategoryHandler(category)"
-      >
-        {{ category }}
-      </button>
+      >{{ category }}</button>
     </div>
   </MainTemplate>
 </template>

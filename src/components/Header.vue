@@ -1,8 +1,6 @@
 <template>
-  <header>
-    <div
-      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
-    >
+  <header class="bg-white shadow-sm">
+    <div class="flex flex-wrap py-4 flex-col md:flex-row items-center container mx-auto">
       <a
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline"
       >
@@ -20,22 +18,14 @@
             d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"
           />
         </svg>
-        <span class="font-serif ml-3 text-2xl hover:no-underline"
-          >FreshBite</span
-        >
+        <span class="font-serif ml-3 text-2xl hover:no-underline">FreshBite</span>
       </a>
       <nav
         class="md:ml-auto flex flex-wrap items-center text-base justify-center font-medium text-gray-600"
       >
-        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/"
-          >Discover</router-link
-        >
-        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/"
-          >My Cookbook</router-link
-        >
-        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/"
-          >My Fridge</router-link
-        >
+        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/">Discover</router-link>
+        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/">My Cookbook</router-link>
+        <router-link class="mr-5 hover:text-gray-900 hover:no-underline" to="/">My Fridge</router-link>
       </nav>
       <button
         class="inline-flex items-center font-semibold text-green-600 bg-green-200 border-0 py-1 px-3 focus:outline-none hover:bg-green-300 hover:text-green-700 rounded text-base mt-4 md:mt-0 transition-all duration-200"

@@ -1,8 +1,48 @@
 <template>
   <MainTemplate>
+    <div
+      class="w-full flex items-center justify-between bg-green-300 rounded-lg py-6 px-8 mb-4 food-pattern"
+    >
+      <div class="p-4">
+        <span class="text-gray-900 text-5xl font-black font-serif">
+          Fresh
+          <span> and</span>
+          <span class="font-serif"> tasty</span>
+          <div>recipes.</div>
+        </span>
+        <button
+          class="inline-flex items-center font-semibold text-green-600 bg-green-100 border-0 py-3 px-5 focus:outline-none hover:text-green-900 rounded text-base transition-all duration-200"
+        >
+          Discover
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-4 h-4 mx-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        :style="{
+          width: '512px',
+          height: '512px',
+          backgroundImage: `url(https://img.pngio.com/hd-previous-food-on-plate-png-transparent-png-image-download-food-plate-png-578_580.png)`,
+        }"
+        class="bg-no-repeat bg-cover bg-center"
+      ></div>
+    </div>
     <h1>Discover</h1>
     <div
-      class="flex flex-col sm:flex-row items-center justify-center text-base font-medium text-gray-700"
+      class="flex flex-col sm:flex-row items-center justify-center text-base font-medium text-gray-700 pb-4"
     >
       <button
         class="py-2 px-4 mx-1 hover:text-green-600 hover:bg-green-200 rounded-md hover:no-underline transition-colors duration-200 hover:font-semibold w-32 active:border-green-200"

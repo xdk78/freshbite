@@ -1,16 +1,20 @@
 <template>
   <MainTemplate>
     <div
-      class="w-full flex items-center justify-between bg-green-300 rounded-lg py-6 px-8 mb-4 food-pattern"
+      class="w-full flex items-center justify-between bg-green-300 rounded-lg py-6 px-8 mb-4 food-pattern overflow-hidden"
     >
       <div class="p-4">
-        <span class="text-gray-900 text-5xl font-black font-serif">
-          Fresh
+        <div
+          id="header-title"
+          class="text-gray-900 text-5xl font-black font-serif"
+        >
+          <span>Fresh </span>
           <span> and</span>
-          <span class="font-serif"> tasty</span>
-          <div>recipes.</div>
-        </span>
+          <span class="font-serif"> tasty</span> <br />
+          <span>recipes.</span>
+        </div>
         <button
+          id="header-button"
           class="inline-flex items-center font-semibold text-green-600 bg-green-100 border-0 py-3 px-5 focus:outline-none hover:text-green-900 rounded text-base transition-all duration-200"
         >
           Discover
@@ -30,15 +34,7 @@
           </svg>
         </button>
       </div>
-
-      <div
-        :style="{
-          width: '512px',
-          height: '512px',
-          backgroundImage: `url('./src/assets/plate.svg')`,
-        }"
-        class="bg-no-repeat bg-cover bg-center -mb-16"
-      ></div>
+      <Plate />
     </div>
     <h1>Discover</h1>
     <div
@@ -72,15 +68,19 @@
 </template>
 
 <script lang="ts">
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { Draggable } from 'gsap/Draggable'
+gsap.registerPlugin(Draggable)
 import MainTemplate from '/@/templates/MainTemplate.vue'
 import GridItem from '/@/components/GridItem.vue'
-
+import { VueComponent as Plate } from '/@/assets/plate.svg'
 export default {
   name: 'Index',
   components: {
     MainTemplate,
     GridItem,
+    Plate,
   },
   setup() {
     const categories = ['All', 'Breakfast', 'Lunch', 'Dinner', 'Dessert']
@@ -147,10 +147,52 @@ export default {
         color: 'teal',
       },
     ]
+
     function selectedCategoryHandler(value) {
       state.selectedCategory = value
     }
+    onMounted(() => {
+      const tl = gsap.timeline({
+        defaults: { duration: 0.7, opacity: 0 },
+      })
+      tl.from('#header-title', {
+        y: -50,
+      })
+        .from('#header-button', {
+          x: -50,
+        })
+        .from(
+          '.plate',
+          { delay: 0.4, scale: 0.2, rotation: 360, transformOrigin: 'center' },
+          '=.2'
+        )
+        .from('.salad', {
+          delay: 0.4,
+          rotation: 120,
+          transformOrigin: 'center',
+        })
+        .from('.salad-shadow', {
+          delay: 0.1,
+        })
+        .from('.shrim-1, .shrim-2', {
+          scale: 3,
+          z: 5,
+        })
+        .from('.shrim-3', {
+          scale: 3,
+          z: 5,
+        })
+        .from('.shrim-4, .shrim-5', {
+          scale: 3,
+          z: 5,
+        })
 
+      Draggable.create('.shrim-1, .shrim-2, .shrim-3, .shrim-4, .shrim-5', {
+        type: 'x,y',
+        edgeResistance: 1,
+        bounds: '.plate',
+      })
+    })
     return {
       categories,
       state,

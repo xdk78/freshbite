@@ -3,8 +3,9 @@
     <div
       class="flex flex-wrap py-4 flex-col md:flex-row items-center container mx-auto"
     >
-      <a
+      <router-link
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline"
+        to="/"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,7 @@
         <span class="font-serif ml-3 text-2xl hover:no-underline"
           >FreshBite</span
         >
-      </a>
+      </router-link>
       <nav
         class="md:ml-auto flex flex-wrap items-center text-base justify-center font-medium text-gray-600"
       >

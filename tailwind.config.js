@@ -3,6 +3,10 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  experimental: {
+    applyComplexClasses: true,
+    uniformColorPalette: true,
+  },
   purge: ['./src/**/*.vue'],
   theme: {
     fontFamily: {

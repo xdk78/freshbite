@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "serve": "vite serve",
     "lint": "eslint . --ext \"src/**/*.{js,ts,vue}\"",
     "lint-fix": "prettier --write \"src/**/*.{js,ts,vue}\""
   },

@@ -1,12 +1,12 @@
 <template>
   <MainTemplate>
     <div
-      class="w-full flex items-center justify-between bg-green-300 rounded-lg py-6 px-8 mb-4 food-pattern overflow-hidden"
+      class="flex items-center justify-between w-full px-8 py-6 mb-4 overflow-hidden bg-green-300 rounded-lg food-pattern"
     >
       <div class="p-4">
         <div
           id="header-title"
-          class="text-gray-900 text-5xl font-black font-serif"
+          class="font-serif text-5xl font-black text-gray-900"
         >
           <span>Fresh </span>
           <span> and</span>
@@ -15,7 +15,7 @@
         </div>
         <button
           id="header-button"
-          class="inline-flex items-center font-semibold text-green-600 bg-green-100 border-0 py-3 px-5 focus:outline-none hover:text-green-900 rounded text-base transition-all duration-200"
+          class="inline-flex items-center px-5 py-3 text-base font-semibold text-green-600 transition-all duration-200 bg-green-100 border-0 rounded focus:outline-none hover:text-green-900"
         >
           Discover
           <svg
@@ -38,10 +38,10 @@
     </div>
     <h1>Discover</h1>
     <div
-      class="flex flex-col sm:flex-row items-center justify-center text-base font-medium text-gray-700 pb-4"
+      class="flex flex-col items-center justify-center pb-4 text-base font-medium text-gray-700 sm:flex-row"
     >
       <button
-        class="py-2 px-4 mx-1 hover:text-green-600 hover:bg-green-200 rounded-md hover:no-underline transition-colors duration-200 hover:font-semibold w-32 active:border-green-200"
+        class="w-32 px-4 py-2 mx-1 transition-colors duration-200 rounded-md hover:text-green-600 hover:bg-green-200 hover:no-underline hover:font-semibold active:border-green-200"
         v-for="category in categories"
         :key="category"
         :class="
@@ -52,7 +52,7 @@
         {{ category }}
       </button>
     </div>
-    <div class="my-4 grid gtc-auto gap-24">
+    <div class="grid gap-24 my-4 gtc-auto">
       <GridItem
         v-for="item in data"
         :key="item.id"
@@ -72,9 +72,11 @@ import { reactive, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
+
 import MainTemplate from '/@/templates/MainTemplate.vue'
 import GridItem from '/@/components/GridItem.vue'
 import { VueComponent as Plate } from '/@/assets/plate.svg'
+
 export default {
   name: 'Index',
   components: {
@@ -85,6 +87,7 @@ export default {
   setup() {
     const categories = ['All', 'Breakfast', 'Lunch', 'Dinner', 'Dessert']
     const state = reactive({ selectedCategory: '' })
+
     const data = [
       {
         id: 0,

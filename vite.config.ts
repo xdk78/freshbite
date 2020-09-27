@@ -7,6 +7,9 @@ const config: UserConfig = {
     '/@/': path.resolve(__dirname, './src'),
   },
   plugins: [svgPlugin()],
+  optimizeDeps: {
+    include: ['gsap/Draggable'],
+  },
 }
 
 export default config

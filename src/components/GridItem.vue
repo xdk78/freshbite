@@ -3,20 +3,20 @@
     :style="{
       backgroundImage: `url(${image})`,
     }"
-    class="flex flex-col items-center justify-end w-full h-64 bg-no-repeat bg-cover rounded-lg shadow-md bg-bottom bg-gray-300"
+    class="flex flex-col items-center justify-end w-full h-64 bg-gray-300 bg-bottom bg-no-repeat bg-cover rounded-lg shadow-md"
   >
-    <div class="p-5 m-3 rounded-lg -mb-6" :class="`bg-${color}-300`">
-      <h3 class="font-serif text-xl pb-2" :class="`text-${color}-800`">
+    <div class="p-5 m-3 -mb-6 rounded-lg" :class="bgcolor">
+      <h3 class="pb-2 font-serif text-xl" :class="xltextcolor">
         {{ title }}
       </h3>
       <div class="flex flex-row">
-        <div class="flex flex-row text-sm" :class="`text-${color}-700`">
+        <div class="flex flex-row text-sm" :class="smtextcolor">
           <div v-if="calories" class="inline-flex items-center font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              class="h-6 w-6 mr-2"
+              class="w-6 h-6 mr-2"
             >
               <path
                 fill-rule="evenodd"
@@ -31,7 +31,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              class="h-6 w-6 mx-2"
+              class="w-6 h-6 mx-2"
             >
               <path
                 fill-rule="evenodd"
@@ -46,7 +46,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              class="h-6 w-6 mx-2"
+              class="w-6 h-6 mx-2"
             >
               <path
                 d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
@@ -63,7 +63,9 @@
 export default {
   name: 'GridIem',
   props: {
-    color: String,
+    bgcolor: String,
+    xltextcolor: String,
+    smtextcolor: String,
     title: String,
     calories: String,
     duration: String,

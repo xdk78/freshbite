@@ -1,6 +1,6 @@
 <template>
   <MainTemplate>
-    <div class="pb-4 text-5xl font-bold text-gray-900">
+    <div class="py-12 text-6xl font-bold text-center text-gray-900">
       {{ title }}
     </div>
     <div

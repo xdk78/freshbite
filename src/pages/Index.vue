@@ -56,6 +56,7 @@
       <GridItem
         v-for="item in data"
         :key="item.id"
+        :id="item.id"
         :title="item.title"
         :bgcolor="item.bgcolor"
         :xltextcolor="item.xltextcolor"

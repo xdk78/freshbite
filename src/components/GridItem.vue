@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/recipe/123" class="hover:no-underline">
+  <router-link :to="`/recipe/${id}`" class="hover:no-underline">
     <div
       :style="{
         backgroundImage: `url(${image})`,
@@ -65,6 +65,7 @@
 export default {
   name: 'GridIem',
   props: {
+    id: String,
     bgcolor: String,
     xltextcolor: String,
     smtextcolor: String,

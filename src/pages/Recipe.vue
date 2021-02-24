@@ -1,6 +1,6 @@
 <template>
   <MainTemplate>
-    <div class="pb-2 text-5xl font-bold text-gray-900">
+    <div class="pb-4 text-5xl font-bold text-gray-900">
       {{ title }}
     </div>
     <div
@@ -211,10 +211,13 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 export default {
   name: 'Recipe',
+  props: {
+    id: String,
+  },
   components: {
     MainTemplate,
   },
-  setup() {
+  setup({ id }) {
     const selectedTab = ref(0)
     onMounted(() => {
       const tl = gsap.timeline()
@@ -222,6 +225,7 @@ export default {
     })
     return {
       selectedTab,
+      id,
       title: 'Schabowy with rice',
       people: '2',
       duration: '20',

@@ -1,17 +1,17 @@
 <template>
-  <footer class="text-gray-700 body-font bottom-0 w-full">
+  <footer class="bottom-0 w-full text-gray-700 body-font">
     <div
-      class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      class="container flex flex-col items-center px-24 py-8 mx-auto sm:flex-row"
     >
       <a
-        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline"
+        class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0 hover:no-underline"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          class="w-10 h-10 text-white p-2 bg-green-400 rounded-full"
+          class="w-10 h-10 p-2 text-white bg-green-400 rounded-full"
         >
           <path
             stroke-linecap="round"
@@ -20,24 +20,24 @@
             d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"
           />
         </svg>
-        <span class="font-serif ml-3 text-2xl hover:no-underline"
+        <span class="ml-3 font-serif text-2xl hover:no-underline"
           >FreshBite</span
         >
       </a>
       <p
-        class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
       >
         © 2020 freshbite —
         <a
           href="https://twitter.com/knyttneve"
-          class="text-gray-600 ml-1"
+          class="ml-1 text-gray-600"
           rel="noopener noreferrer"
           target="_blank"
           >@okwasniewski @xdk78</a
         >
       </p>
       <span
-        class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start"
       >
         <a class="text-gray-500">
           <svg

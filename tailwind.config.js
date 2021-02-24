@@ -1,37 +1,22 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+  purge: {
+    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   },
-  experimental: {
-    applyComplexClasses: true,
-    uniformColorPalette: true,
-  },
-  purge: ['./src/**/*.vue'],
   theme: {
-    fontFamily: {
-      serif: 'Pacifico',
+    extend: {
+      fontFamily: {
+        serif: 'Pacifico',
+      },
     },
   },
   variants: {
-    backgroundColor: [
-      'responsive',
-      'default',
-      'hover',
-      'focus',
-      'active',
-      'disabled',
-    ],
-    textColor: [
-      'responsive',
-      'default',
-      'hover',
-      'focus',
-      'active',
-      'disabled',
-    ],
-    cursor: ['responsive', 'default', 'hover', 'focus', 'active', 'disabled'],
-    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    extend: {
+      textOverflow: ['responsive', 'group-hover'],
+      backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+      textColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+      cursor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+      scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    },
   },
   plugins: [],
 }

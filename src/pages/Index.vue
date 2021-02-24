@@ -15,7 +15,7 @@
         </div>
         <button
           id="header-button"
-          class="inline-flex items-center px-5 py-3 text-base font-semibold text-green-600 transition-all duration-200 bg-green-100 border-0 rounded focus:outline-none hover:text-green-900"
+          class="inline-flex items-center px-5 py-3 my-4 text-base font-semibold text-green-600 transition-all duration-200 bg-green-100 border-0 rounded focus:outline-none hover:text-green-900"
         >
           Discover
           <svg
@@ -57,7 +57,9 @@
         v-for="item in data"
         :key="item.id"
         :title="item.title"
-        :color="item.color"
+        :bgcolor="item.bgcolor"
+        :xltextcolor="item.xltextcolor"
+        :smtextcolor="item.smtextcolor"
         :calories="item.calories"
         :duration="item.duration"
         :people="item.people"
@@ -75,7 +77,8 @@ gsap.registerPlugin(Draggable)
 
 import MainTemplate from '/@/templates/MainTemplate.vue'
 import GridItem from '/@/components/GridItem.vue'
-import { VueComponent as Plate } from '/@/assets/plate.svg'
+
+import Plate from '/@/assets/plate.svg?component'
 
 export default {
   name: 'Index',
@@ -97,7 +100,9 @@ export default {
         people: '1',
         image:
           'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'orange',
+        bgcolor: 'bg-yellow-300',
+        xltextcolor: 'text-yellow-800',
+        smtextcolor: 'text-yellow-700',
       },
       {
         id: 1,
@@ -107,7 +112,9 @@ export default {
         people: '4',
         image:
           'https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'red',
+        bgcolor: 'bg-red-300',
+        xltextcolor: 'text-red-800',
+        smtextcolor: 'text-red-700',
       },
       {
         id: 2,
@@ -117,7 +124,9 @@ export default {
         people: '2',
         image:
           'https://images.unsplash.com/photo-1585238342070-61e1e768b1ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'purple',
+        bgcolor: 'bg-purple-300',
+        xltextcolor: 'text-purple-800',
+        smtextcolor: 'text-purple-700',
       },
       {
         id: 3,
@@ -127,7 +136,9 @@ export default {
         people: '3',
         image:
           'https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'green',
+        bgcolor: 'bg-green-300',
+        xltextcolor: 'text-green-800',
+        smtextcolor: 'text-green-700',
       },
       {
         id: 4,
@@ -137,7 +148,9 @@ export default {
         people: '4',
         image:
           'https://images.unsplash.com/photo-1557038684-abb03178899e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'yellow',
+        bgcolor: 'bg-yellow-300',
+        xltextcolor: 'text-yellow-800',
+        smtextcolor: 'text-yellow-700',
       },
       {
         id: 5,
@@ -147,7 +160,9 @@ export default {
         people: '4',
         image:
           'https://images.unsplash.com/photo-1580013759032-c96505e24c1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512',
-        color: 'teal',
+        bgcolor: 'bg-green-300',
+        xltextcolor: 'text-green-800',
+        smtextcolor: 'text-green-700',
       },
     ]
 

@@ -6,12 +6,12 @@
       }"
       class="flex flex-col items-center justify-end w-full h-64 bg-gray-300 bg-bottom bg-no-repeat bg-cover rounded-lg shadow-md"
     >
-      <div class="p-5 m-3 -mb-6 rounded-lg" :class="`bg-${color}-300`">
-        <h3 class="pb-2 font-serif text-xl" :class="`text-${color}-800`">
+      <div class="p-5 m-3 -mb-6 rounded-lg" :class="bgcolor">
+        <h3 class="pb-2 font-serif text-xl" :class="xltextcolor">
           {{ title }}
         </h3>
         <div class="flex flex-row">
-          <div class="flex flex-row text-sm" :class="`text-${color}-700`">
+          <div class="flex flex-row text-sm" :class="smtextcolor">
             <div v-if="calories" class="inline-flex items-center font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,9 @@
 export default {
   name: 'GridIem',
   props: {
-    color: String,
+    bgcolor: String,
+    xltextcolor: String,
+    smtextcolor: String,
     title: String,
     calories: String,
     duration: String,

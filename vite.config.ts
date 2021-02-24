@@ -1,15 +1,11 @@
 import type { UserConfig } from 'vite'
 import path from 'path'
-import svgPlugin from 'vite-plugin-svg'
+import svgPlugin from 'vite-plugin-vue-svg'
+import vue from '@vitejs/plugin-vue'
 
 const config: UserConfig = {
-  alias: {
-    '/@/': path.resolve(__dirname, './src'),
-  },
-  plugins: [svgPlugin()],
-  optimizeDeps: {
-    include: ['gsap/Draggable'],
-  },
+  resolve: { alias: { '/@': path.resolve(__dirname, './src') } },
+  plugins: [vue(), svgPlugin()],
 }
 
 export default config

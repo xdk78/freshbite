@@ -1,10 +1,12 @@
 <template>
   <Header />
+
   <transition name="slide-fade" appear>
-    <div class="container p-4 mx-auto">
+    <div class="container px-24 py-4 mx-auto">
       <slot />
     </div>
   </transition>
+
   <Footer />
 </template>
 

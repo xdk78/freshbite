@@ -1,28 +1,33 @@
-# Node.js with Vue
-# Build a Node.js project that uses Vue.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 pool:
-  vmImage: ubuntu-latest
+  vmImage: "windows-latest"
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '16.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "16.x"
+    displayName: "Install Node.js"
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+  - task: Npm@1
+    displayName: "npm install"
+    inputs:
+      command: "install"
+      workingDir: $(System.DefaultWorkingDirectory)
 
-- task: CopyFiles@2
-  inputs:
-    Contents: 'dist/**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: Npm@1
+    displayName: "npm run build"
+    inputs:
+      command: "custom"
+      workingDir: $(System.DefaultWorkingDirectory)
+      customCommand: run build
 
-- task: PublishBuildArtifacts@1
-  inputs: 
-    PathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
-    ArtifactName: 'www' # output artifact named www
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: "$(System.DefaultWorkingDirectory)/dist"
+      Contents: "**"
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "drop"
+      publishLocation: "Container"

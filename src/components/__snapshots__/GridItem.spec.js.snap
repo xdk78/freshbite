@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridItem renders correctly 1`] = `
+<router-link
+  class="hover:no-underline"
+  item="[object Object]"
+  to="/recipe/undefined"
+>
+  <div
+    class="flex flex-col items-center justify-end w-full h-64 bg-gray-300 bg-bottom bg-no-repeat bg-cover rounded-lg shadow-md"
+    style="background-image: url(undefined);"
+  >
+    <div
+      class="p-5 m-3 -mb-6 rounded-lg"
+    >
+      <h3
+        class="pb-2 font-serif text-xl"
+      />
+      <div
+        class="flex flex-row"
+      >
+        <div
+          class="flex flex-row text-sm"
+        >
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+    </div>
+  </div>
+</router-link>
+`;

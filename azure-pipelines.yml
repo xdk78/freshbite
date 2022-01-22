@@ -14,6 +14,12 @@ steps:
       workingDir: $(System.DefaultWorkingDirectory)
 
   - task: Npm@1
+    displayName: "npm test"
+    inputs:
+      command: "test"
+      workingDir: $(System.DefaultWorkingDirectory)
+
+  - task: Npm@1
     displayName: "npm run build"
     inputs:
       command: "custom"

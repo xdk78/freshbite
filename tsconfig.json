@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "es2018"],
+    "lib": ["dom", "es2020"],
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
     "strict": false,
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
@@ -16,7 +17,10 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "paths": {
+      "/@/*": ["./src/*"]
+    }
   },
   "exclude": ["node_modules"]
 }
